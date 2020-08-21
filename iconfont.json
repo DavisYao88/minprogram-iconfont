@@ -1,0 +1,5 @@
+ {
+        "cssPath": "https://at.alicdn.com/t/font_1732694_ef65p86svwn.css",
+        "saveDir": "src/assets/style",
+        "cssModules": ["less","scss","wxss"]
+    }
