@@ -2,10 +2,10 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-21 14:26:29 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 00:54:39
+ * @Last Modified time: 2020-08-22 01:15:59
  */
 const path = require("path")
-const { download, isExisted, writeFileToFolder, readJson } = require('./lib/fileUtil');
+const { download, isExisted, writeFileToFolder, readJson } = require('../lib/fileUtil');
 const makeDir = require('make-dir');
 const colors = require('colors');
 
@@ -15,7 +15,8 @@ const colors = require('colors');
  */
 function getProjectRootPath() {
     let rootPath = path.resolve(__dirname)
-    return rootPath.slice(0, rootPath.indexOf('node_modules'))
+    console.log(rootPath);
+    return rootPath.slice(0, rootPath.indexOf('command'))
 }
 /**
  * 读取iconfont全局配置
@@ -40,7 +41,7 @@ async function readConfig(rootPath) {
  */
 async function geneateCssFile(folderName, fileName, content, modules) {
     try {
-        if (await isExisted(folderName)) {
+        if (await isExisted(folderName) && modules.length > 1) {
             console.log(colors.green("正在生成..."));
             modules.forEach(module => {
                 writeFileToFolder(folderName, `${fileName}.${module}`, content)

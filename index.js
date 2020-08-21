@@ -1,11 +1,14 @@
+#!/usr/bin/env node
 /*
  * @Author: heishanlaoyao 
- * @Date: 2020-08-22 00:53:07 
+ * @Date: 2020-08-22 01:13:48 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 00:58:22
+ * @Last Modified time: 2020-08-22 01:23:05
  */
-const { executeGeneate} = require('./command/geneateStyleFont')
-const command = require('./lib/command')
+
+const { executeGeneate} = require('./command/geneateStyleFont');
+const {command} = require('./lib/command');
+
 (() => {
     const commands = [
         {

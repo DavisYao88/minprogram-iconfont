@@ -6,8 +6,9 @@
   "directories": {
     "lib": "lib"
   },
+  "repository": {},
   "bin": {
-    "iconfont": "iconfont.js"
+    "iconfont": "index.js"
   },
   "dependencies": {},
   "devDependencies": {
