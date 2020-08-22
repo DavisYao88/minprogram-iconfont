@@ -2,22 +2,14 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-21 14:26:29 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 16:31:28
+ * @Last Modified time: 2020-08-22 16:45:20
  */
-const path = require("path")
+
 const { download, isExisted, writeFileToFolder, readJson } = require('../lib/fileUtil');
 const makeDir = require('make-dir');
 const colors = require('colors');
+const { getProjectRootPath} = require('../lib/rootPath')
 
-/**
- *  获取配置文件目录
- * @param {*} params 
- */
-function getProjectRootPath() {
-    let rootPath = path.resolve(__dirname)
-    console.log(rootPath);
-    return rootPath.slice(0, rootPath.indexOf('command'))
-}
 /**
  * 读取iconfont全局配置
  * @param {*}  
