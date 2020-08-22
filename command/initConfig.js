@@ -2,7 +2,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-22 00:53:48 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 16:46:21
+ * @Last Modified time: 2020-08-22 16:59:12
  */
 /**
  * 初始化 iconfont配置
@@ -11,6 +11,8 @@
  */
 const { writeJson } = require('../lib/fileUtil');
 const colors = require('colors');
+const { getProjectRootPath } = require('../lib/rootPath')
+
 
 const configTemp = {
     "cssPath": "请输入iconfont项目中的font class地址，文件后缀为.css",
@@ -25,9 +27,9 @@ const configTemp = {
 async function initIconfontConfig() {
     let path = getProjectRootPath()
     try {
-        await writeJson(path, configTemp)
+        await writeJson(`${path}/iconfont.json`, configTemp)
     } catch (error) {
         console.error(colors.red(error))
     }
 }
-module.exports = { initIconfontConfig()}
+module.exports = { initIconfontConfig}

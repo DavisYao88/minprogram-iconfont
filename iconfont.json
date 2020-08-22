@@ -1,6 +1,6 @@
- {
-        "cssPath": "https://at.alicdn.com/t/font_1732694_ef65p86svwn.css",
-        "saveDir": "src/assets/style",
-        "cssModules": ["less"],
-        "fileName":""
-    }
+{
+	"cssPath": "请输入iconfont项目中的font class地址，文件后缀为.css",
+	"saveDir": "请输入生成后的文件存放目录",
+	"cssModules": "请输入要转换的CSS预处理器格式",
+	"fileName": "iconfont"
+}

@@ -2,7 +2,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-21 14:26:29 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 16:45:20
+ * @Last Modified time: 2020-08-22 17:03:11
  */
 
 const { download, isExisted, writeFileToFolder, readJson } = require('../lib/fileUtil');
@@ -66,6 +66,10 @@ async function executeGeneate() {
     try {
         config = await readConfig(path)
         console.log("配置参数：", config.cssModules);
+        if (!(/.css$/g.test(config.cssPath))) {
+            console.error(colors.red("The file address must end with.css"))
+            return
+        }
         content = await download(config.cssPath)
         if (config && Array.isArray(config.cssModules)) {
             cssModules = cssModules.concat(config.cssModules)
