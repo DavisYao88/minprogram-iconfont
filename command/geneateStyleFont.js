@@ -2,7 +2,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-21 14:26:29 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 17:03:11
+ * @Last Modified time: 2020-08-22 21:30:34
  */
 
 const { download, isExisted, writeFileToFolder, readJson } = require('../lib/fileUtil');
@@ -22,7 +22,7 @@ async function readConfig(rootPath) {
         return iconfontJson
     }
     console.error(colors.red(`${configName} is not in folder!`))
-    throw new Error("配置文件不存在")
+    throw new Error("The profile does not exist")
 }
 
 
@@ -35,19 +35,19 @@ async function geneateCssFile(folderName, fileName, content, modules) {
     content = content.replace(/\/\/at.alicdn.com/g, 'https://at.alicdn.com')
     try {
         if (await isExisted(folderName) && modules.length > 1) {
-            console.log(colors.green("正在生成..."));
+            console.log(colors.green("Being generated..."));
         
             modules.forEach(module => {
                 writeFileToFolder(folderName, `${fileName}.${module}`, content)
             })
-            console.log(colors.green("文件生成成功"));
+            console.log(colors.green("File generation successful"));
         } else {
             await makeDir(folderName)
-            console.log(colors.green("正在生成..."));
+            console.log(colors.green("Being generated..."));
             modules.forEach(module => {
                 writeFileToFolder(folderName, `${fileName}.${module}`, content)
             })
-            console.log(colors.green("文件生成成功"));
+            console.log(colors.green("File generation successful"));
         }
     } catch (error) {
         console.error(colors.red(error))
@@ -65,8 +65,7 @@ async function executeGeneate() {
     let content = ""
     try {
         config = await readConfig(path)
-        console.log("配置参数：", config.cssModules);
-        if (!(/.css$/g.test(config.cssPath))) {
+        if (!(/[a-zA-z0-9]{1,}.css$/g.test(config.cssPath))) {
             console.error(colors.red("The file address must end with.css"))
             return
         }
