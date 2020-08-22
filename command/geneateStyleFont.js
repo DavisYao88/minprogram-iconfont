@@ -2,7 +2,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-21 14:26:29 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 01:15:59
+ * @Last Modified time: 2020-08-22 16:31:28
  */
 const path = require("path")
 const { download, isExisted, writeFileToFolder, readJson } = require('../lib/fileUtil');
@@ -40,9 +40,11 @@ async function readConfig(rootPath) {
  * @param {*} fileName 
  */
 async function geneateCssFile(folderName, fileName, content, modules) {
+    content = content.replace(/\/\/at.alicdn.com/g, 'https://at.alicdn.com')
     try {
         if (await isExisted(folderName) && modules.length > 1) {
             console.log(colors.green("正在生成..."));
+        
             modules.forEach(module => {
                 writeFileToFolder(folderName, `${fileName}.${module}`, content)
             })
@@ -50,7 +52,9 @@ async function geneateCssFile(folderName, fileName, content, modules) {
         } else {
             await makeDir(folderName)
             console.log(colors.green("正在生成..."));
-            await writeFileToFolder(folderName, fileName, content)
+            modules.forEach(module => {
+                writeFileToFolder(folderName, `${fileName}.${module}`, content)
+            })
             console.log(colors.green("文件生成成功"));
         }
     } catch (error) {
