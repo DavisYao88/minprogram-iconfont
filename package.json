@@ -1,6 +1,6 @@
 {
   "name": "minprogram-iconfont",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "基于iconfont的class加载库",
   "main": "index.js",
   "directories": {
