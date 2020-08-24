@@ -1,6 +1,6 @@
 {
   "name": "minprogram-iconfont",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "基于iconfont的class加载库",
   "main": "index.js",
   "directories": {
@@ -10,18 +10,20 @@
   "bin": {
     "iconfont": "index.js"
   },
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "axios": "^0.20.0",
     "colors": "^1.4.0",
+    "commander": "^6.0.0",
     "fs-extra": "^9.0.1",
     "make-dir": "^3.1.0",
     "nodemon": "^2.0.4",
     "underscore": "^1.10.2",
-    "commander": "^6.0.0"
+    "webpack": "^4.44.1"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "nodemon index"
+    "start": "nodemon index",
+    "build":"node ./lib/build"
   },
   "keywords": [
     "iconfont",

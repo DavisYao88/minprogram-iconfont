@@ -3,7 +3,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-22 01:13:48 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-23 23:15:02
+ * @Last Modified time: 2020-08-24 10:07:59
  */
 const {readJson } = require('./lib/fileUtil');
 const { executeGeneate} = require('./command/geneateStyleFont');
