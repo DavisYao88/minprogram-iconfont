@@ -2,7 +2,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-22 00:53:48 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 21:26:39
+ * @Last Modified time: 2020-08-24 17:02:04
  */
 /**
  * 初始化 iconfont配置
@@ -26,8 +26,10 @@ const configTemp = {
  */
 async function initIconfontConfig() {
     let path = getProjectRootPath()
+    console.log(path);
     try {
         await writeJson(`${path}/iconfont.json`, configTemp)
+        console.log(colors.green("iconfont.json generation successful", `${path}/iconfont.json`));
     } catch (error) {
         console.error(colors.red(error))
     }

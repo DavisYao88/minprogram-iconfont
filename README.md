@@ -1,6 +1,6 @@
 ### 1.安装字体加载插件
 ```
-    npm install minprogram-iconfont 
+    npm install minprogram-iconfont -g
 ```
 ### 2.初始化配置文件
 ```

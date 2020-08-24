@@ -2,7 +2,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-21 14:26:29 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-22 21:30:34
+ * @Last Modified time: 2020-08-24 17:36:05
  */
 
 const { download, isExisted, writeFileToFolder, readJson } = require('../lib/fileUtil');
@@ -15,7 +15,7 @@ const { getProjectRootPath} = require('../lib/rootPath')
  * @param {*}  
  */
 async function readConfig(rootPath) {
-    let configName = "iconfont.json"
+    let configName = "/iconfont.json"
     let path = rootPath + configName
     if (await isExisted(path)) {
         let iconfontJson = await readJson(path)
