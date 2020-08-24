@@ -4,7 +4,7 @@
 ```
 ### 2.初始化配置文件
 ```
-    项目根目录执行: iconfont init
+    iconfont init
 ```
 ### 3.修改配置文件（iconfont.json）
 ```

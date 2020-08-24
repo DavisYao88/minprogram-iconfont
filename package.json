@@ -6,9 +6,12 @@
   "directories": {
     "lib": "lib"
   },
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeiShanLaoYao889/minprogram-iconfont.git"
+  },
   "bin": {
-    "iconfont": "index.js"
+    "iconfont": "./src/index.js"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -20,10 +23,12 @@
     "underscore": "^1.10.2",
     "webpack": "^4.44.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "node-loader": "^1.0.1",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  },
   "scripts": {
-    "start": "nodemon index",
-    "build":"node ./lib/build"
+    "start": "nodemon ./src/index"
   },
   "keywords": [
     "iconfont",
