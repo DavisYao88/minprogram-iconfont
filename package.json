@@ -1,6 +1,6 @@
 {
   "name": "minprogram-iconfont",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "基于iconfont的class加载库",
   "main": "index.js",
   "directories": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/HeiShanLaoYao889/minprogram-iconfont.git"
   },
   "bin": {
-    "iconfont": "./src/index.js"
+    "iconfont": "index.js"
   },
   "dependencies": {
     "axios": "^0.20.0",
@@ -28,7 +28,7 @@
     "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "scripts": {
-    "start": "nodemon ./src/index"
+    "start": "nodemon index"
   },
   "keywords": [
     "iconfont",

@@ -3,7 +3,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-22 01:13:48 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-24 10:59:25
+ * @Last Modified time: 2020-08-24 11:58:36
  */
 const {readJson } = require('./lib/fileUtil');
 const { executeGeneate} = require('./command/geneateStyleFont');
@@ -13,7 +13,7 @@ const colors = require('colors');
 (() => {
     try {
        
-        let packageJson = require('../package.json')
+        let packageJson = require('./package.json')
         const commands = [
             {
                 name: 'init',
