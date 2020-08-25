@@ -15,6 +15,9 @@
         "fileName": "自定义生成CSS文件名称，默认为iconfont"
     }
 ```
+    saveDir：为生成字体文件CSS后存放的目录，例如：src/assets/style
+    cssModules：为目标文件类型，需为数组。例如：["less","scss"],默认只生成CSS文件
+
 ### 4.生成字体CSS文件
 ```
     iconfont generate

@@ -2,7 +2,7 @@
  * @Author: heishanlaoyao 
  * @Date: 2020-08-21 14:26:29 
  * @Last Modified by: heishanlaoyao
- * @Last Modified time: 2020-08-24 17:36:05
+ * @Last Modified time: 2020-08-25 09:39:39
  */
 
 const { download, isExisted, writeFileToFolder, readJson } = require('../lib/fileUtil');
@@ -65,6 +65,7 @@ async function executeGeneate() {
     let content = ""
     try {
         config = await readConfig(path)
+        
         if (!(/[a-zA-z0-9]{1,}.css$/g.test(config.cssPath))) {
             console.error(colors.red("The file address must end with.css"))
             return
@@ -74,7 +75,7 @@ async function executeGeneate() {
             cssModules = cssModules.concat(config.cssModules)
             await geneateCssFile(`${path}/${config.saveDir}`, fileName, content, cssModules)
         } else {
-            console.error(colors.red("cssModules should be Array!"))
+            console.error(colors.red("The cssModules should be Array!"))
         }
     } catch (error) {
         console.error(colors.red(error))

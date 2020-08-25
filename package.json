@@ -1,6 +1,6 @@
 {
   "name": "minprogram-iconfont",
-  "version": "0.0.11",
+  "version": "1.0.0",
   "description": "基于iconfont的class加载库",
   "main": "index.js",
   "directories": {
@@ -19,13 +19,7 @@
     "commander": "^6.0.0",
     "fs-extra": "^9.0.1",
     "make-dir": "^3.1.0",
-    "nodemon": "^2.0.4",
-    "underscore": "^1.10.2",
-    "webpack": "^4.44.1"
-  },
-  "devDependencies": {
-    "node-loader": "^1.0.1",
-    "uglifyjs-webpack-plugin": "^2.2.0"
+    "nodemon": "^2.0.4"
   },
   "scripts": {
     "start": "nodemon index"
